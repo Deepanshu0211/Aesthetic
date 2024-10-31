@@ -1,0 +1,253 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(Font/Gilroy-SemiBold.ttf);
+}
+@font-face {
+  font-family: Gilroymed;
+  src: url(Font/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: GilroyItalic;
+  src: url(Font/Gilroy-MediumItalic.ttf);
+}
+@font-face {
+  font-family: Gilroythin;
+  src: url(Font/Gilroy-ThinItalic.ttf);
+}
+@font-face {
+  font-family: Gilroythin2;
+  src: url(Font/Gilroy-Thin.ttf);
+}
+@font-face {
+  font-family: Gilroyultra;
+  src: url(Font/Gilroy-UltraLight.ttf);
+}
+@font-face {
+  font-family: GilroyLight;
+  src: url(Font/Gilroy-Light.ttf);
+}
+
+
+body{
+    background-color: rgba(249, 241, 240, 1)   ;
+    padding: 10px;
+}
+.topnav {
+    background-color: rgba(250, 220, 217, 1);
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 5px;
+  }
+  .name{
+    position: absolute;
+    top: 3vh;
+    left: 3vw;
+    font-size: 6vh;
+    
+   
+  }
+  .name2{
+    font-family: GilroyItalic;
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color:rgba(69,73,56,255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.7s;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #e0c5c5;
+    color: black;
+    transition: 0.7s;
+    border-radius: 10px;
+  }
+  
+  /* Add a color to the active/current link */
+.box1{
+    background-color: rgba(250, 220, 217, 1);
+      display: flex;
+      position: absolute;
+      top: 13vh;
+    
+      height: 45vh;
+      width: 40vw;
+      border-radius: 15px;
+    
+   
+}
+.Rev{
+  font-family: Gilroy;
+  position: absolute;
+  top: 15vh;
+  left: 1vw;
+  width: 40vw;
+  padding: 5px;
+  font-size: 5vh;
+}
+
+.vin{
+  font-family: Gilroythin;
+
+}
+
+.img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.5);  /* Starts larger */
+  transition: all 1s ease;
+  opacity: 0;
+  background-color: rgba(250, 220, 217, 1);
+}
+
+/* Final style after loading: normal size and position */
+#container.loaded .img {
+  left: 43vw;           /* Moves to its original position */
+  top: 7.3vw;
+  transform: translate(0, 0) scale(1);  /* Returns to normal size */
+  opacity: 1;
+  background-color: rgba(250, 220, 217, 1);
+ 
+ 
+}
+
+
+.img img{
+  background-color: rgba(250, 220, 217, 1);
+  height: 43.5vh;
+  border-radius: 15px;
+  width: 19.7vw;
+}
+
+.work{
+  
+  height: 65vh;
+  width: 33.5vw;
+  border-radius: 15px;
+  position: absolute;
+  right: 1.4vw;
+  background-color: rgba(250, 220, 217, 1);
+  top: 7.3vw;
+}
+
+.work-title {
+  font-family: Gilroy;
+  font-size: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-title {
+  font-family: Gilroythin;
+  font-size: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-description {
+  font-family: GilroyLight;
+  font-size: 2vh;
+ padding: 10px;
+  
+}
+
+
+.project-divider {
+  border: none;  /* Remove default border */
+  height: 1px;   /* Line height */
+  background-color: rgba(69, 73, 56, 0.5);  /* Line color */
+  margin: 10px 0; /* Spacing around the line */
+}
+
+.project {
+  margin: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.about{
+ 
+  border-radius: 15px;
+  position: absolute;
+  height: 37vh;
+  width: 30vw;
+  bottom: 1.5vh;
+  background-color: rgba(250, 220, 217, 1);
+}
+.aboutp{
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+  font-size: 8vh;
+
+}
+.intro{
+  position: absolute;
+  left: 1vw;
+  bottom: 01vh;
+  font-size: 1vw;
+  width: 80%;
+  font-family: GilroyLight;
+}
+
+.contact{
+  background-color: rgba(248, 175, 166, 1);
+  border-radius: 15px;
+  position: absolute;
+  height: 37vh;
+  width: 30vw;
+  bottom: 1.5vh;
+  left: 33vw;
+}
+.have{
+  padding: 6vh 2vw;
+  font-family: GilroyLight;
+}
+.me{
+  position: absolute;
+  left: 1.5vw;
+  bottom: 4vh;
+  font-size: 8vh;
+}
+
+.social{
+  background-color: rgba(250, 220, 217, 1);
+  border-radius: 15px;
+  position: absolute;
+  height: 17vh;
+  width: 33.6vw;
+  bottom: 1.5vh;
+  left: 65vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  text-decoration: none;
+  
+  a{
+    text-decoration: none;
+    color: black;
+    font-family: Gilroyultra;
+
+  }
+}
+
+#container {
+ 
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+#container.loaded {
+ 
+  opacity: 1;
+}
