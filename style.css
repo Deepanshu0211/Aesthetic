@@ -27,62 +27,81 @@
   src: url(Font/Gilroy-Light.ttf);
 }
 
-
-body{
-    background-color: rgba(249, 241, 240, 1)   ;
-    padding: 10px;
+.mouse {
+  position: fixed;
+  width: 10vw; /* Responsive width */
+  height: 10vw; /* Responsive height */
+  background-color: rgba(189, 133, 133, 0.493);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fadeInCursor 0.5s ease;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
+
+@keyframes fadeInCursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: rgba(249, 241, 240, 1);
+  padding: 10px;
+}
+
 .topnav {
-    background-color: rgba(250, 220, 217, 1);
-    overflow: hidden;
-    border-radius: 15px;
-    padding: 5px;
-  }
-  .name{
-    position: absolute;
-    top: 3vh;
-    left: 3vw;
-    font-size: 6vh;
-    
-   
-  }
-  .name2{
-    font-family: GilroyItalic;
-  }
-
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: right;
-    color:rgba(69,73,56,255);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    transition: 0.7s;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #e0c5c5;
-    color: black;
-    transition: 0.7s;
-    border-radius: 10px;
-  }
-  
-  /* Add a color to the active/current link */
-.box1{
-    background-color: rgba(250, 220, 217, 1);
-      display: flex;
-      position: absolute;
-      top: 13vh;
-    
-      height: 45vh;
-      width: 40vw;
-      border-radius: 15px;
-    
-   
+  background-color: rgba(250, 220, 217, 1);
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 2px;
 }
-.Rev{
+
+.name {
+  position: absolute;
+  top: 3vh;
+  left: 3vw;
+  font-size: 6vh;
+}
+
+.name2 {
+  font-family: GilroyItalic;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: rgba(69, 73, 56, 255);
+  text-align: center;
+  padding: 1vw 1vw; /* Responsive padding */
+  text-decoration: none;
+  font-size: 2vw; /* Responsive font size */
+  transition: 0.7s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #e0c5c5;
+  color: black;
+  transition: 0.7s;
+  border-radius: 10px;
+}
+
+.box1 {
+  background-color: rgba(250, 220, 217, 1);
+  display: flex;
+  position: absolute;
+  top: 13vh;
+  height: 45vh;
+  width: 80vw; /* Responsive width */
+  max-width: 600px; /* Max width for larger screens */
+  border-radius: 15px;
+}
+
+.Rev {
   font-family: Gilroy;
   position: absolute;
   top: 15vh;
@@ -92,16 +111,15 @@ body{
   font-size: 5vh;
 }
 
-.vin{
+.vin {
   font-family: Gilroythin;
-
 }
 
 .img {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(1.5);  /* Starts larger */
+  transform: translate(-50%, -50%) scale(1.5);
   transition: all 1s ease;
   opacity: 0;
   background-color: rgba(250, 220, 217, 1);
@@ -109,32 +127,29 @@ body{
 
 /* Final style after loading: normal size and position */
 #container.loaded .img {
-  left: 43vw;           /* Moves to its original position */
+  left: 47vw;
   top: 7.3vw;
-  transform: translate(0, 0) scale(1);  /* Returns to normal size */
+  transform: translate(0, 0) scale(1);
   opacity: 1;
   background-color: rgba(250, 220, 217, 1);
- 
- 
 }
 
-
-.img img{
+.img img {
   background-color: rgba(250, 220, 217, 1);
-  height: 43.5vh;
+  height: auto; /* Responsive height */
+  max-height: 43.5vh; /* Max height */
   border-radius: 15px;
-  width: 19.7vw;
+  width: 100%; /* Responsive width */
 }
 
-.work{
-  
+.work {
   height: 65vh;
   width: 33.5vw;
   border-radius: 15px;
   position: absolute;
   right: 1.4vw;
   background-color: rgba(250, 220, 217, 1);
-  top: 7.3vw;
+  top: 13vh;
 }
 
 .work-title {
@@ -156,15 +171,13 @@ body{
 .project-description {
   font-family: GilroyLight;
   font-size: 2vh;
- padding: 10px;
-  
+  padding: 10px;
 }
 
-
 .project-divider {
-  border: none;  /* Remove default border */
-  height: 1px;   /* Line height */
-  background-color: rgba(69, 73, 56, 0.5);  /* Line color */
+  border: none; /* Remove default border */
+  height: 1px; /* Line height */
+  background-color: rgba(69, 73, 56, 0.5); /* Line color */
   margin: 10px 0; /* Spacing around the line */
 }
 
@@ -174,8 +187,7 @@ body{
   padding-bottom: 10px;
 }
 
-.about{
- 
+.about {
   border-radius: 15px;
   position: absolute;
   height: 37vh;
@@ -183,14 +195,15 @@ body{
   bottom: 1.5vh;
   background-color: rgba(250, 220, 217, 1);
 }
-.aboutp{
+
+.aboutp {
   position: absolute;
   left: 1vw;
   top: 1vh;
   font-size: 8vh;
-
 }
-.intro{
+
+.intro {
   position: absolute;
   left: 1vw;
   bottom: 01vh;
@@ -199,7 +212,7 @@ body{
   font-family: GilroyLight;
 }
 
-.contact{
+.contact {
   background-color: rgba(248, 175, 166, 1);
   border-radius: 15px;
   position: absolute;
@@ -208,18 +221,21 @@ body{
   bottom: 1.5vh;
   left: 33vw;
 }
-.have{
+
+.have {
   padding: 6vh 2vw;
   font-family: GilroyLight;
+  font-size: 3vh;
 }
-.me{
+
+.me {
   position: absolute;
   left: 1.5vw;
   bottom: 4vh;
   font-size: 8vh;
 }
 
-.social{
+.social {
   background-color: rgba(250, 220, 217, 1);
   border-radius: 15px;
   position: absolute;
@@ -232,22 +248,77 @@ body{
   align-items: center;
   gap: 2vw;
   text-decoration: none;
-  
-  a{
-    text-decoration: none;
-    color: black;
-    font-family: Gilroyultra;
+}
 
-  }
+.social a {
+  text-decoration: none;
+  color: black;
+  font-family: Gilroyultra;
 }
 
 #container {
- 
   opacity: 0;
   transition: transform 1s ease, opacity 1s ease;
 }
 
 #container.loaded {
- 
   opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  html{
+    display: none;
+  }
+  .name {
+    font-size: 8vh; /* Adjust for smaller screens */
+  }
+
+  .topnav a {
+    font-size: 4vw; /* Adjust for smaller screens */
+    padding: 2vw 3vw; /* Adjust padding */
+  }
+
+  .box1 {
+    width: 90vw; /* Full width on smaller screens */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .work,
+  .about,
+  .contact,
+  .social {
+    width: 90vw; /* Adjust widths */
+    height: auto; /* Allow height to adjust */
+    position: relative; /* Change position for stacking */
+    margin: 1vh auto; /* Center and add margin */
+  }
+
+  .img img {
+    max-height: 30vh; /* Responsive max height */
+    width: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+
+  html{
+    display: none;
+  }
+
+
+  .name {
+    font-size: 10vh; /* Further adjust for smaller screens */
+  }
+
+  .work-title,
+  .project-title,
+  .project-description {
+    font-size: 3vh; /* Adjust text size */
+  }
+
+  .aboutp,
+  .me {
+    font-size: 6vh; /* Adjust text size */
+  }
 }
